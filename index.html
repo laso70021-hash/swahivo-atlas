@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/swahivo/logo.png" />
+    <meta name="theme-color" content="#081622" />
+    <meta
+      name="description"
+      content="Buy, sell and rent vehicles with Swahivo. East Africa based Zanzibar, Tanzania."
+    />
+    <!-- The publisher, not the agency using it: this names who wrote the software. -->
+    <link rel="canonical" href="https://car.swahivo.com/" />
+    <meta property="og:url" content="https://car.swahivo.com/" />
+    <meta property="og:image" content="https://car.swahivo.com/swahivo/logo.png" />
+    <meta name="author" content="Swahivo" />
+    <!--
+      `/` is a public marketing page for a signed-out visitor now, so this
+      origin is indexable. Everything behind sign-in still requires a session
+      regardless of what a crawler does — Row Level Security is the actual
+      boundary, not this tag.
+    -->
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="%VITE_APP_NAME% · Car Dealership & Car Rental" />
+    <meta
+      property="og:description"
+      content="Buy, sell and rent vehicles with Swahivo. East Africa based Zanzibar, Tanzania."
+    />
+    <!--
+      No Referer, ever.
+
+      An invitation link carries a bearer token in its fragment. Fragments are
+      not sent in a Referer header, but the surrounding path still is, and
+      "/accept-invite" arriving at a third party is a signal about a person that
+      nothing here needs to emit. The same policy protects every other route: a
+      contract, customer and vehicle id all appear in this product's URLs.
+    -->
+    <meta name="referrer" content="no-referrer" />
+    <title>%VITE_APP_NAME% · Car Dealership & Car Rental</title>
+  </head>
+  <body>
+    <a
+      href="#main"
+      style="
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 100;
+        padding: 0.5rem 1rem;
+        background: #fff;
+      "
+      onfocus="
+        this.style.left = '0.5rem'
+        this.style.top = '0.5rem'
+      "
+      onblur="this.style.left = '-9999px'"
+      >Skip to main content</a
+    >
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

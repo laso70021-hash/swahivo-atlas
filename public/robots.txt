@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /seller
+Disallow: /customer
+Disallow: /rental/
+Disallow: /provider/
+Disallow: /dashboard
+Disallow: /sign-in
+Disallow: /settings
+Disallow: /auth
+Sitemap: https://car.swahivo.com/sitemap.xml
